@@ -1,0 +1,873 @@
+/* General Styles */
+:root {
+    --primary-color: #3498db;
+    --primary-light: #e8f4fc;
+    --secondary-color: #2980b9;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --gray-color: #95a5a6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--dark-color);
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 0 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header .logo {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.sidebar-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.nav {
+    padding: 20px 0;
+}
+
+.nav-item {
+    margin-bottom: 5px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.nav-link i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    border-left: 3px solid var(--primary-color);
+}
+
+.sidebar-footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+/* Top Navigation */
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.username {
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.notifications {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+.notifications .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--danger-color);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Content Area */
+.content-area {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-banner {
+    margin-bottom: 30px;
+}
+
+.welcome-banner h1 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.welcome-banner p {
+    color: var(--gray-color);
+    font-size: 1rem;
+}
+
+/* Summary Cards */
+.summary-cards {
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.balance-card {
+    background-color: var(--primary-light);
+    border-left: 4px solid var(--primary-color);
+}
+
+.savings-card {
+    background-color: #f0f8f0;
+    border-left: 4px solid var(--success-color);
+}
+
+.interest-card {
+    background-color: #fff8e8;
+    border-left: 4px solid var(--warning-color);
+}
+
+.card-title {
+    font-size: 1rem;
+    color: var(--gray-color);
+    margin-bottom: 15px;
+}
+
+.card-amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.card-detail {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    margin-bottom: 10px;
+}
+
+.account-number, .interest-rate {
+    font-size: 0.85rem;
+    color: var(--gray-color);
+    font-weight: 500;
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-action {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: calc(25% - 10px);
+    min-width: 120px;
+    transition: all 0.3s;
+}
+
+.btn-action i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.btn-action span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-action:hover {
+    background-color: var(--primary-light);
+    border-color: var(--primary-color);
+}
+
+/* Transaction Card */
+.transaction-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: transparent;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-card .card-header h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+}
+
+.view-all {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    font-weight: 600;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    border-top: none;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 15px;
+}
+
+.table td i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.debit {
+    color: var(--danger-color);
+    font-weight: 600;
+}
+
+.credit {
+    color: var(--success-color);
+    font-weight: 600;
+}
+
+.badge {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.badge.completed {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--success-color);
+}
+
+/* Upcoming Transfers */
+.upcoming-card .card-header {
+    padding: 15px 25px;
+    background-color: transparent;
+    border-bottom: 1px solid #eee;
+}
+
+.upcoming-card .card-header h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+}
+
+.transfer-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.transfer-item:last-child {
+    border-bottom: none;
+}
+
+.transfer-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.transfer-details {
+    flex: 1;
+}
+
+.transfer-details h6 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.transfer-details p {
+    margin: 3px 0 0;
+    font-size: 0.85rem;
+    color: var(--gray-color);
+}
+
+.transfer-amount {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* Quick Transfer Card */
+.quick-transfer-card .card-header {
+    padding: 15px 25px;
+    background-color: transparent;
+    border-bottom: 1px solid #eee;
+}
+
+.quick-transfer-card .card-header h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+}
+
+.quick-transfer-card .form-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark-color);
+    margin-bottom: 8px;
+}
+
+.quick-transfer-card .form-select,
+.quick-transfer-card .form-control {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.quick-transfer-card .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.quick-transfer-card .btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 70px;
+        overflow: hidden;
+    }
+
+    .sidebar-header h3,
+    .nav-link span,
+    .sidebar-footer .btn span {
+        display: none;
+    }
+
+    .sidebar-header {
+        padding: 10px;
+    }
+
+    .nav-link {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .nav-link i {
+        margin-right: 0;
+        font-size: 1.3rem;
+    }
+
+    .main-content {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    .quick-actions {
+        justify-content: flex-start;
+    }
+
+    .btn-action {
+        width: calc(33.33% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .quick-actions {
+        justify-content: flex-start;
+    }
+
+    .btn-action {
+        width: calc(50% - 10px);
+    }
+
+    .summary-cards .col-md-4 {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .top-nav {
+        justify-content: space-between;
+    }
+
+    .btn-action {
+        width: 100%;
+    }
+}
+
+/* Modern Input Fields */
+.form-control, .form-select {
+    border: 2px solid #e0e3eb;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    background-color: #f8fafc;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #4361ee;
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.15);
+    background-color: #fff;
+}
+
+.input-group-text {
+    background-color: #f8fafc;
+    border: 2px solid #e0e3eb;
+    border-right: none;
+    padding: 0 16px;
+}
+
+.input-group .form-control {
+    border-left: none;
+}
+
+/* Transfer Card Styling */
+.transfer-card {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.transfer-card .card-body {
+    padding: 30px;
+}
+
+.account-selected {
+    background-color: #f0f4ff;
+    border-radius: 12px;
+    padding: 16px;
+    border: 2px solid #e0e4ff;
+}
+
+/* Radio Button Styling */
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    border: 2px solid #e0e3eb;
+}
+
+.form-check-input:checked {
+    background-color: #4361ee;
+    border-color: #4361ee;
+}
+
+.form-check-label {
+    margin-left: 8px;
+    font-weight: 500;
+    color: #3f3f46;
+}
+
+/* Summary Card Styling */
+.summary-card {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    background-color: #f9fafb;
+}
+
+.summary-card .card-header {
+    background-color: transparent;
+    border-bottom: 2px solid #f3f4f6;
+    padding: 20px 25px;
+    font-weight: 600;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.summary-item span {
+    color: #6b7280;
+}
+
+.summary-item strong {
+    color: #111827;
+    font-weight: 500;
+}
+
+.summary-item.total {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 2px dashed #e5e7eb;
+}
+
+.summary-item.total strong {
+    font-size: 18px;
+    color: #4361ee;
+}
+
+/* Transfer Limits Styling */
+.transfer-limits {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    border: 2px solid #f3f4f6;
+}
+
+.transfer-limits h6 {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.list-group-item {
+    border-color: #f3f4f6;
+    padding: 12px 0;
+    background-color: transparent;
+}
+
+/* Confirmation Modal Styling */
+#confirmationModal .modal-content {
+    border-radius: 16px;
+    overflow: hidden;
+    border: none;
+}
+
+#confirmationModal .modal-header {
+    border-bottom: none;
+    padding: 24px 24px 0;
+    position: relative;
+}
+
+#confirmationModal .modal-header .btn-close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+}
+
+#confirmationModal .modal-body {
+    padding: 0 24px 24px;
+    text-align: center;
+}
+
+#confirmationModal .modal-footer {
+    border-top: none;
+    padding: 16px 24px 24px;
+    background-color: #f9fafb;
+}
+
+.confirmation-details {
+    background-color: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.detail-item span {
+    color: #6b7280;
+}
+
+.detail-item strong {
+    color: #111827;
+    font-weight: 500;
+}
+
+/* Success Icon */
+.checkmark-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #e6f7ee;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.checkmark-circle i {
+    font-size: 36px;
+    color: #10b981;
+}
+
+/* Modern Buttons */
+.btn {
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4361ee;
+    border-color: #4361ee;
+}
+
+.btn-primary:hover {
+    background-color: #3a56d4;
+    border-color: #3a56d4;
+    transform: translateY(-2px);
+}
+
+.btn-lg {
+    padding: 14px 28px;
+}
+
+/* Schedule Options Styling */
+.schedule-options {
+    background-color: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 12px;
+    border: 2px solid #f3f4f6;
+}
+
+/* New Recipient Form Styling */
+.new-recipient-form {
+    background-color: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 12px;
+    border: 2px solid #f3f4f6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .transfer-card .card-body {
+        padding: 20px;
+    }
+
+    .summary-card {
+        margin-top: 24px;
+    }
+}
+
+/* Add to your dashboard.css file */
+.transfer-timing-options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-check-card {
+    position: relative;
+}
+
+.form-check-card .form-check-input {
+    position: absolute;
+    opacity: 0;
+}
+
+.form-check-card .form-check-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f9fafb;
+}
+
+.form-check-card .form-check-label i {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.form-check-card .form-check-label span {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.form-check-card .form-check-label small {
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+}
+
+/* Selected State */
+.form-check-card .form-check-input:checked + .form-check-label {
+    border-color: #4361ee;
+    background-color: #f0f4ff;
+    box-shadow: 0 0 0 1px #4361ee;
+}
+
+.form-check-card .form-check-input:checked + .form-check-label i {
+    color: #4361ee;
+}
+
+.form-check-card .form-check-input:checked + .form-check-label span {
+    color: #4361ee;
+}
+
+/* Hover State */
+.form-check-card .form-check-label:hover {
+    border-color: #a5b4fc;
+    background-color: #f8fafc;
+}
+
+/* Add this to your CSS for even clearer active state */
+.active-option {
+    border-color: #4361ee !important;
+    background-color: #f0f4ff !important;
+    box-shadow: 0 0 0 2px #4361ee !important;
+}
+
+.active-option i, .active-option span {
+    color: #4361ee !important;
+}
+
+/* Animation for selection */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.2); }
+    70% { box-shadow: 0 0 0 6px rgba(67, 97, 238, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0); }
+}
+
+.form-check-card .form-check-input:checked + .form-check-label {
+    animation: pulse 0.5s ease;
+}
+
+.nav-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #fff;
+}
+
+.nav-item.active .nav-link {
+    font-weight: bold;
+}
+
+.balance-card {
+    border-left: 5px solid #007bff; /* blue */
+    background-color: #e9f2ff;
+}
+
+.savings-card {
+    border-left: 5px solid #28a745; /* green */
+    background-color: #e7f8ec;
+}
+
+.interest-card {
+    border-left: 5px solid #ffc107; /* yellow */
+    background-color: #fff9e6;
+}
+

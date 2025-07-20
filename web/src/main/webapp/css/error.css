@@ -1,0 +1,129 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.error-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.error-icon {
+    font-size: 5rem;
+    color: #dc3545;
+    margin-bottom: 1.5rem;
+}
+
+.error-icon .bi-server {
+    color: #6c757d;
+}
+
+.error-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #212529;
+}
+
+.error-subtitle {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #495057;
+}
+
+.error-message {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #4361ee;
+    border-color: #4361ee;
+}
+
+.btn-primary:hover {
+    background-color: #3a56d4;
+    border-color: #3a56d4;
+}
+
+.btn-outline-primary {
+    border-color: #4361ee;
+    color: #4361ee;
+}
+
+.btn-outline-primary:hover {
+    background-color: #f0f4ff;
+}
+
+.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f8f9fa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .error-container {
+        padding: 1rem;
+    }
+
+    .error-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .error-title {
+        font-size: 3rem;
+    }
+
+    .error-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .error-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

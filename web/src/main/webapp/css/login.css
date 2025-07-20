@@ -1,0 +1,117 @@
+/* General Styles */
+body.banking-auth {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.auth-card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+.card-header {
+    padding: 1.5rem;
+    border-bottom: none;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 50px;
+    height: 2px;
+    background-color: #3498db;
+}
+
+/* Form Styles */
+.form-control, .form-select {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    border-right: none;
+}
+
+.input-group .form-control {
+    border-left: none;
+}
+
+.toggle-password {
+    border-left: none;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* Password Strength Indicator */
+.password-strength .progress {
+    margin-top: 5px;
+}
+
+#strength {
+    font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .auth-card {
+        margin-top: 20px;
+    }
+}
+
+/* Validation Styles */
+.is-invalid {
+    border-color: #e74c3c;
+}
+
+.is-invalid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(231, 76, 60, 0.25);
+}
+
+.invalid-feedback {
+    color: #e74c3c;
+    font-size: 0.875em;
+}
+
+/* Security Info */
+.security-info {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #2ecc71;
+}

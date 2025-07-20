@@ -1,0 +1,302 @@
+/* Profile UI - Base Styles */
+.profileUI-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profileUI-header {
+    margin-bottom: 2rem;
+}
+
+.profileUI-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.profileUI-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Card Styles */
+.profileUI-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.profileUI-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profileUI-card-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.profileUI-card-header h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+}
+
+.profileUI-card-body {
+    padding: 1.5rem;
+}
+
+/* Avatar Styles */
+.profileUI-avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.profileUI-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f0f4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4361ee;
+    font-size: 2.5rem;
+}
+
+.profileUI-username {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.profileUI-status {
+    font-size: 0.9rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profileUI-status-badge {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #2ecc71;
+}
+
+/* Detail Items */
+.profileUI-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profileUI-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.profileUI-detail-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.profileUI-detail-value {
+    font-size: 0.95rem;
+    color: #2c3e50;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Form Styles */
+.profileUI-form-group {
+    margin-bottom: 1.25rem;
+}
+
+.profileUI-form-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.profileUI-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.profileUI-form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e0e3eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.profileUI-form-control:focus {
+    border-color: #4361ee;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+}
+
+.profileUI-password-toggle {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.profileUI-password-strength {
+    margin-top: 0.5rem;
+}
+
+.profileUI-strength-meter {
+    height: 4px;
+    background-color: #e0e3eb;
+    border-radius: 2px;
+    margin-bottom: 0.25rem;
+    overflow: hidden;
+}
+
+.profileUI-strength-meter::after {
+    content: '';
+    display: block;
+    width: 20%;
+    height: 100%;
+    background-color: #e74c3c;
+}
+
+.profileUI-strength-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.profileUI-strength-text span {
+    color: #e74c3c;
+}
+
+.profileUI-form-actions {
+    margin-top: 1.5rem;
+}
+
+.profileUI-btn-primary {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileUI-btn-primary:hover {
+    background-color: #3a56d4;
+}
+
+/* Notice Styles */
+.profileUI-notice {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #4361ee;
+}
+
+.profileUI-notice-icon {
+    font-size: 1.5rem;
+    color: #4361ee;
+}
+
+.profileUI-notice-content h5 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+}
+
+.profileUI-notice-content p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.profileUI-notice-link {
+    color: #4361ee;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.profileUI-notice-link:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.profileUI-modal-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.profileUI-modal-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.profileUI-modal-icon.success {
+    color: #2ecc71;
+}
+
+.profileUI-modal-body h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+}
+
+.profileUI-modal-body p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .profileUI-container {
+        padding: 1rem;
+    }
+
+    .profileUI-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profileUI-notice {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>lk.codebridge.app</groupId>
+        <artifactId>Unity_National_Bank</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>ear</artifactId>
+    <packaging>ear</packaging>
+    <name>unity_national_bank_ear</name>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>lk.codebridge.app</groupId>
+            <artifactId>web</artifactId>
+            <version>1.0</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>lk.codebridge.app</groupId>
+            <artifactId>auth</artifactId>
+            <version>1.0</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>lk.codebridge.app</groupId>
+            <artifactId>bank_accounts</artifactId>
+            <version>1.0</version>
+            <type>ejb</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.name}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <modules>
+                        <ejbModule>
+                            <groupId>lk.codebridge.app</groupId>
+                            <artifactId>auth</artifactId>
+                            <bundleFileName>auth-module.jar</bundleFileName>
+                        </ejbModule>
+                        <ejbModule>
+                            <groupId>lk.codebridge.app</groupId>
+                            <artifactId>bank_accounts</artifactId>
+                            <bundleFileName>accounts-module.jar</bundleFileName>
+                        </ejbModule>
+                        <webModule>
+                            <groupId>lk.codebridge.app</groupId>
+                            <artifactId>web</artifactId>
+                            <contextRoot>/unity_national_bank</contextRoot>
+                            <bundleFileName>web-module.war</bundleFileName>
+                        </webModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+</project>

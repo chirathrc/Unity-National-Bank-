@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="AppPU" transaction-type="JTA">
+        <jta-data-source>Unity_National_Bank_resource</jta-data-source>
+        <class>lk.codebridge.app.core.model.User</class>
+        <class>lk.codebridge.app.core.model.Account</class>
+        <class>lk.codebridge.app.core.model.Transfer</class>
+        <class>lk.codebridge.app.core.model.ScheduledTransfer</class>
+        <class>lk.codebridge.app.core.model.Rate</class>
+        <class>lk.codebridge.app.core.model.Interest_History</class>
+        <class>lk.codebridge.app.core.model.InterestFinalizeHistory</class>
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
+            <property name="jakarta.persistence.sharedCache.mode" value="NONE"/>
+            <property name="eclipselink.cache.shared.default" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>

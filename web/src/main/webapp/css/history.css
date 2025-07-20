@@ -1,0 +1,460 @@
+/* ===== Base Styles ===== */
+:root {
+    --primary-color: #4361ee;
+    --primary-light: #e8f4fc;
+    --secondary-color: #3a56d4;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --info-color: #06b6d4;
+    --gray-color: #6b7280;
+    --light-gray: #f3f4f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ===== Dashboard Layout ===== */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--dark-color);
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 0 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header .logo {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.sidebar-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.nav {
+    padding: 20px 0;
+}
+
+.nav-item {
+    margin-bottom: 5px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.nav-link i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    border-left: 3px solid var(--primary-color);
+}
+
+.sidebar-footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+/* ===== Top Navigation ===== */
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.username {
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+/* ===== Content Area ===== */
+.content-area {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+/* ===== Transaction Card ===== */
+.transaction-card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.transaction-card .table {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.transaction-card th {
+    font-weight: 500;
+    color: var(--gray-color);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-top: none;
+    border-bottom: 2px solid var(--light-gray);
+    padding: 12px 16px;
+    background-color: #f9fafb;
+}
+
+.transaction-card td {
+    vertical-align: middle;
+    padding: 16px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+/* ===== Color Utilities ===== */
+.bg-primary-bg {
+    background-color: rgba(67, 97, 238, 0.1);
+}
+
+.bg-success-bg {
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.bg-warning-bg {
+    background-color: rgba(245, 158, 11, 0.1);
+}
+
+.bg-info-bg {
+    background-color: rgba(6, 182, 212, 0.1);
+}
+
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.text-danger {
+    color: var(--danger-color) !important;
+}
+
+.text-warning {
+    color: var(--warning-color) !important;
+}
+
+.text-info {
+    color: var(--info-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* ===== Badges ===== */
+.badge {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.badge.bg-success-bg {
+    background-color: rgba(16, 185, 129, 0.1) !important;
+    color: var(--success-color) !important;
+}
+
+.badge.bg-warning-bg {
+    background-color: rgba(245, 158, 11, 0.1) !important;
+    color: var(--warning-color) !important;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn i {
+    margin-right: 6px;
+}
+
+.btn-outline-primary {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-outline-secondary {
+    border: 1px solid #e5e7eb;
+    color: var(--gray-color);
+    background-color: transparent;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--light-gray);
+}
+
+.btn-outline-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+}
+
+/* ===== Transaction Rows ===== */
+.transaction-row:hover {
+    background-color: var(--light-gray);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 70px;
+        overflow: hidden;
+    }
+
+    .sidebar-header h3,
+    .nav-link span,
+    .sidebar-footer .btn span {
+        display: none;
+    }
+
+    .sidebar-header {
+        padding: 10px;
+    }
+
+    .nav-link {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .nav-link i {
+        margin-right: 0;
+        font-size: 1.3rem;
+    }
+
+    .main-content {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+    }
+
+    .content-area {
+        padding: 15px;
+    }
+
+    .transaction-card th,
+    .transaction-card td {
+        padding: 12px 8px;
+    }
+
+    .transaction-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .top-nav {
+        justify-content: space-between;
+    }
+
+    .transaction-card {
+        border-radius: 0;
+    }
+}
+
+/* Transaction Modal Styles */
+#transactionModal .modal-content {
+    border-radius: 16px;
+    overflow: hidden;
+    border: none;
+}
+
+#transactionModal .modal-header {
+    border-bottom: 1px solid var(--light-gray);
+    padding: 20px;
+}
+
+#transactionModal .modal-body {
+    padding: 20px;
+}
+
+#transactionModal .modal-footer {
+    border-top: 1px solid var(--light-gray);
+    padding: 16px 20px;
+}
+
+.transaction-header {
+    padding-bottom: 16px;
+    border-bottom: 1px dashed var(--light-gray);
+    margin-bottom: 20px;
+}
+
+.transaction-icon-lg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.transaction-icon-lg i {
+    font-size: 24px;
+}
+
+.transaction-amount-lg {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: var(--gray-color);
+    display: flex;
+    align-items: center;
+}
+
+.detail-value {
+    font-weight: 500;
+    text-align: right;
+}
+
+/* Color variants for transaction types */
+.transaction-type-transfer .transaction-icon-lg {
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+}
+
+.transaction-type-payment .transaction-icon-lg {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color);
+}
+
+.transaction-type-deposit .transaction-icon-lg {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+}
+
+.transaction-type-bill .transaction-icon-lg {
+    background-color: rgba(6, 182, 212, 0.1);
+    color: var(--info-color);
+}
+
+.transaction-type-scheduled .transaction-icon-lg {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning-color);
+}
