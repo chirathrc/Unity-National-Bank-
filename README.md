@@ -13,19 +13,6 @@
 
 ---
 
-## 🧱 Project Structure
-
-unity-national-bank/
-├── auth/             → Authentication & security logic (EJB)
-├── bank_accounts/    → Core banking services (EJB)
-├── core/             → Domain models, interfaces, enums
-├── web/              → JSP-based frontend with Jakarta Security
-├── ear/              → EAR project for Payara deployment
-├── README.md         → Project documentation
-└── LICENSE           → Licensing & usage terms
-
----
-
 ## 🚀 Key Features
 
 ### 👤 Authentication & Roles
